@@ -1,0 +1,45 @@
+p1{color: red;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+#div1{
+     animation-name: example2;
+    animation-duration: 4s;
+     animation: example2 10s infinite;
+     animation-direction: alternate;
+    
+    color:red;
+    padding: 100px;
+    margin-right:100px;
+    z-index: -1;
+    
+}
+
+#div2{
+         animation-name: example3;
+    animation-duration: 4s;
+     animation: example3 10s infinite;
+     animation-direction: alternate;
+    
+    color:red;
+    padding: 100px;
+    margin-right:100px;
+    z-index: -1;
+}    
+
+@keyframes example2{
+      0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+@keyframes example3{
+      0%   {background-color: green;}
+    25%  {background-color: blue;}
+    50%  {background-color: yellow;}
+    100% {background-color: red;}
+}
+    

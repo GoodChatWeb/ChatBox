@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Webserver</title>
+	<style type="text/css">
+
+h1,h2,h3,h4,h5,h6,p {
+    cursor: default;
+    font-family: sans-serif;
+}
+		
+h1,h2, {
+	font-family: sans-serif;
+	margin: 200px;
+	color: white;
+    text-decoration: none;
+
+}
+
+button {
+    width: 75px;
+    height: 30px;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+}
+
+.control-audio {
+    float: right;
+    z-index: -1;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.login-kit {
+    width: 300px;
+    height: 400px;
+    background: white;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px #888888;
+    padding: 25px;
+    margin: 20px auto;
+}
+
+.textfileds {
+    margin-top: 40px;
+}
+
+.textfileds input {
+    width: 275px;
+    height: 40px;
+    background: white;
+    border: 1px solid lightgray;
+    margin: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.input-submit{
+    width: 300px;
+    height: 200px;
+}
+
+.input-submit button{
+    color: blue;
+    font-family: sans-serif;
+    border: none;
+    background: white;
+    text-decoration: none;
+    margin-left: 5px; 
+}
+
+.input-submit input{
+    width: 80px;
+    height: 40px;
+    float: right;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(57,122,242);
+    color: white;
+    font-size: 15px;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #8100ff
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 20s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+    
+    #myBtn {
+        width: 150px;
+        height: 50px;
+        background: white;
+        border: none;
+        font-family: sans-serif;
+        font-size: 15px;
+        outline: none;
+    }
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+	</style>
+	<script type="text/javascript">
+            
+            var validation = function(){            
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            var old_username = "Emil";
+            var old_password = "Badsalt";
+
+            if (username == '' && password == ''){
+                alert("Please write something!")
+            }
+            else{
+                if (username == old_username && password == old_password){
+                    window.open("http://goodchatweb.github.io/homepage.html")
+                }
+                else {
+                    alert("Your password or username is wrong!")
+                    
+                }
+            }
+
+            console.log(username)
+
+            }
+
+
+        </script>
+</head>
+<body>
+
+<h1 style="color: white;">Welcome to our Website</h1>
+<h2 style="color: white;">By Emil and Astor</h2>
+
+<div class="login-kit">
+    <h2 style="color: gray;font-family: sans-serif; margin-left: 25px;">Login to Our Website</h2>
+    <div class="textfileds">
+        <input type="text" name="username" id="username" placeholder="Username">
+        <input type="password" name="password" id="password" placeholder="Password">
+    </div>
+    <div class="input-submit">
+
+<input type="submit" name="submit" onclick="validation()">
+
+<button id="myBtn">Forgot password?</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal" style="display: none;">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p style="">Nää Inte ____</p>
+  </div>
+
+</div>
+
+</div>
+        
+    </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

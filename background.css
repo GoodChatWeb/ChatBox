@@ -1,0 +1,27 @@
+@keyframes bgcolor {
+    0% {
+        background-color: MediumSeaGreen
+    }
+
+    30% {
+        background-color: Blue
+    }
+
+    60% {
+        background-color: Red
+    }
+
+    90% {
+        background-color: 
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
